@@ -1,0 +1,123 @@
+.aldbox {
+	font-family: Sans;
+	font-size: 12px;
+	margin: 5px 0;
+}
+.aldbox ul {
+	/*float: left;*/
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.aldbox li {
+	float: left;
+	margin-right: 5px;
+	border: 1px solid #aaa;
+	border-radius: 3px;
+}
+.aldbox li:hover {
+	border-color: #444;
+	box-shadow: #777 0 0 2px;
+}
+.aldbox .voted li {
+	color: #999;
+}
+.aldbox .voted li:first-child:hover,
+.aldbox .voted li:nth-child(2):hover { /* keep buttons flat after voting */
+	border-color: #aaa;
+	box-shadow: none;
+	background-color: #dfdfdf;
+	cursor: default; /* prevent cursor change over the button */
+}
+
+.aldbox li,
+.aldbox li a {
+	-o-transition: all .5s ease-in;
+	-moz-transition: all .25s ease; 
+	-webkit-transition: all .5s ease-in; 
+	transition: all .25s ease;
+}
+
+.aldbox li {
+	height: 28px; /* for the button without text */
+	line-height: 28px; /* need line-height to vertically center the span */
+	min-width: 33px;
+	background-color: #dfdfdf;
+	color: #444;
+}
+.aldbox li a { /* expand anchor to fit whole button */
+	width: 100%;
+	height: 100%;
+	display: block;
+	text-decoration: none;
+}
+.aldbox li a,
+.aldbox li a:hover,
+.aldbox li a:active,
+.aldbox li a:visited {
+	color: #444;
+}
+.aldbox li:first-child {
+	background-image: url("images/thumb_up_transp.png");
+	background-position: 3px 50%;
+	background-repeat: no-repeat;
+	/*background-size: 20px;*/
+}
+.aldbox li:nth-child(2) {
+	background-image: url("images/thumb_down_transp.png");
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	/*background-size: 20px;*/
+}
+.aldbox li:first-child:hover {
+	background-color: #efa;
+}
+.aldbox li:nth-child(2):hover {
+	background-color: #f99;
+}
+.aldbox li:first-child span {
+	font-weight: bold;
+	padding: 0 3px 0 30px;
+}
+.aldbox table {
+	border-collapse: collapse;
+}
+.aldbox tbody td {
+	vertical-align: middle;
+	padding: 0;
+}
+.aldbox tbody td:first-child {
+	padding: 0 5px;
+}
+.aldbox .likebar {
+	height: 5px;
+	background-color: #AADA37;
+	border: 1px solid #698A14;
+}
+.aldbox .barwrap {
+	width: 120px; /* some value to measure the % */
+}
+.aldbox .dislikebar {
+	height: 5px;
+	background-color: #CF362F;
+	border: 1px solid #881811;
+}
+.aldbox .noview {
+	left: -999em;
+	position: absolute;
+}
+.aldbox span {
+	/*vertical-align: middle;*/
+}
+.aldbox .likebox_id {
+	overflow: hidden;
+	padding: 3px; /* keep in mind the :hover shadow */
+}
+.aldbox .likebox_id>span {
+	line-height: 30px; /* <li> line-height + border */
+}
+.aldbox .loading {
+	height: 30px;
+	background: url('./images/working.gif') 50% 50% no-repeat;
+}
